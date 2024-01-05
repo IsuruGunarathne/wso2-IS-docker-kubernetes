@@ -42,3 +42,33 @@ Copy the IS 6.1 folder (named wso2is-6.1.0) to the docker folder and run the fol
 #### start minikube
 
 `minikube start`
+
+#### run this to make live easier `alias kubectl="minikube kubectl --"`
+
+#### get the image from docker repository
+
+`eval $(minikube docker-env)`
+
+#### Build image again and check local mini kube repository
+
+`docker build -t is6.1 .` image will be named IS6.1
+`minikube image ls` check local mini kube repository
+
+#### deploy IS 6.1
+
+`kubectl create -f is.yaml`
+
+# everything works up to this point
+
+#### expose IS 6.1 port
+
+`kubectl expose deployment is-deployment --type=NodePort --port=9443 --target-port=30100`
+
+#### view all deployments
+
+`kubectl get deployments`
+`kubectl get services`
+
+#### delete cluster
+
+`minikube delete --all`
