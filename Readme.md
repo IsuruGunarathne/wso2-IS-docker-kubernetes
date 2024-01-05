@@ -2,7 +2,7 @@
 
 ## Deploying on docker
 
-### Docker commands
+Copy the IS 6.1 folder (named wso2is-6.1.0) to the docker folder and run the following commands
 
 #### Build image
 
