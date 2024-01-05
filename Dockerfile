@@ -26,7 +26,7 @@ LABEL maintainer="WSO2 interns" \
 WORKDIR /home/wso2carbon
 
 # copy WSO2 product distribution to user's home directory and set home directory ownership to user wso2carbon
-COPY ../wso2is-6.1.0 /home/wso2carbon/
+COPY ./wso2is-6.1.0 /home/wso2carbon/wso2is-6.1.0
 
 # expose ports
 EXPOSE 4000 9763 9443
