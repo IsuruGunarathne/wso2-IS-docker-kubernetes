@@ -4,18 +4,22 @@
 
 Copy the IS 6.1 folder (named wso2is-6.1.0) to the docker folder and run the following commands
 
+#### start docker
+
+`sudo systemctl start docker`
+
 #### Build image
 
-`docker build -t is6.1 .` # image will be named IS6.1
+`docker build -t is6.1 .` image will be named IS6.1
 
 #### Delete docker image
 
-`docker rmi is6.1` # delete image named IS6.1
-`docker rmi -f is6.1` # force delete image named IS6.1`
+`docker rmi is6.1` delete image named IS6.1
+`docker rmi -f is6.1` force delete image named IS6.1`
 
 #### Run container
 
-`docker run -d --rm -p 127.0.0.1:9443:9443 is6.1` # run container in background and map port 8080 to 8080
+`docker run -d --rm -p 127.0.0.1:9443:9443 is6.1` run container in background and map port 8080 to 8080
 
 #### view all containers
 
@@ -32,3 +36,9 @@ Copy the IS 6.1 folder (named wso2is-6.1.0) to the docker folder and run the fol
 #### remove all containers
 
 `docker container prune`
+
+## Deploying on kubernetes
+
+#### start minikube
+
+`minikube start`
