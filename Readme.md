@@ -63,15 +63,18 @@ Copy the IS 6.1 folder (named wso2is-6.1.0) to the docker folder and run the fol
 get pod name using `kubectl get pods`
 `kubectl logs -f <pod name>`
 
-# everything works up to this point
-
 #### expose IS 6.1 port
 
 `kubectl expose deployment is-deployment --type=NodePort --port=9443 --target-port=9443`
 
 #### view all deployments
 
-`kubectl get deployments`
+`minikube service is-deployment --url` change link to https:// to access IS 6.1 deployment on kubernetes
+or 
+`minikube service is-service --url` change link to https:// to access IS 6.1 deployment on kubernetes
+
+#### view all services
+
 `kubectl get services`
 
 #### delete cluster
