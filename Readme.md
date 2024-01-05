@@ -15,8 +15,20 @@ Copy the IS 6.1 folder (named wso2is-6.1.0) to the docker folder and run the fol
 
 #### Run container
 
-`docker run -d -p 127.0.0.1:9443:9443 is6.1` # run container in background and map port 8080 to 8080
+`docker run -d --rm -p 127.0.0.1:9443:9443 is6.1` # run container in background and map port 8080 to 8080
+
+#### view all containers
+
+`docker ps -a`
 
 #### logs for the container
 
 `docker logs -f <container id>`
+
+#### Stop container
+
+`docker stop <container id>`
+
+#### remove all containers
+
+`docker container prune`
