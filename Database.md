@@ -33,3 +33,34 @@ create a namespace for the deployment
 `kubectl create namespace wso2` OR `kubectl create -f namespace.yaml` namespace.yaml file is in the service-account directory<br>
 use `kubectl get namespaces` to view all namespaces<br>
 use `kubectl delete namespace wso2` to delete the namespace<br>
+
+### caching
+
+add the following to the deployment.yaml file
+
+```
+[server]
+force_local_cache = true
+```
+
+### load balancer
+
+add the following to the deployment.yaml file
+
+```
+[transport.http.properties]
+proxyPort = 80
+[transport.https.properties]
+proxyPort = 443
+```
+
+### change host name (optional)
+
+add the following to the deployment.yaml file
+
+```
+[server]
+hostname = "wso2.is"
+```
+
+Note : for this to take effect the ip of the cluster should be added to the /etc/hosts file of the host machine
