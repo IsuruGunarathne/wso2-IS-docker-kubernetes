@@ -22,8 +22,8 @@ local_member_port = "4000"
 
 [clustering.properties]
 membershipSchemeClassName = "org.wso2.carbon.membership.scheme.kubernetes.KubernetesMembershipScheme"
-KUBERNETES_NAMESPACE = "wso2-is"
-KUBERNETES_SERVICES = "wso2is-service"
+KUBERNETES_NAMESPACE = "wso2"
+KUBERNETES_SERVICES = "is-service"
 KUBERNETES_MASTER_SKIP_SSL_VERIFICATION = true
 USE_DNS = false
 
