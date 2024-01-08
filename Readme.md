@@ -37,7 +37,7 @@ Copy the IS 6.1 folder (named wso2is-6.1.0) to the docker folder and run the fol
 
 `docker container prune`
 
-## Deploying on kubernetes
+## Deploying on kubernetes (using minikube)
 
 #### start minikube
 
