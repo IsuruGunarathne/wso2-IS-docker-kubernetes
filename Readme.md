@@ -42,9 +42,9 @@ Copy the IS 6.1 folder (named wso2is-6.1.0) to the docker folder and run the fol
 #### start minikube
 
 `minikube start` <br>
-kubectl is required for steps to follow
-run `alias kubectl="minikube kubectl --"` to use minikube kubectl
-OR
+kubectl is required for steps to follow<br>
+run `alias kubectl="minikube kubectl --"` to use minikube kubectl<br>
+OR <br>
 `sudo snap install kubectl --classic` to install kubectl
 
 #### get the image from docker repository or build from within minikube
@@ -53,8 +53,8 @@ OR
 
 #### Build image again and check local mini kube repository
 
-`docker build -t is6.1 .` image will be named IS6.1
-OR
+`docker build -t is6.1 .` image will be named IS6.1 <br>
+OR <br>
 `minikube image load is6.1` load image to local mini kube repository from docker repository
 `minikube image ls` check local mini kube repository
 
