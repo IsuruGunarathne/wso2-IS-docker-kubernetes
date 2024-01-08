@@ -55,7 +55,7 @@ OR <br>
 
 `docker build -t is6.1 .` image will be named IS6.1 <br>
 OR <br>
-`minikube image load is6.1` load image to local mini kube repository from docker repository
+`minikube image load is6.1` load image to local mini kube repository from docker repository <br>
 `minikube image ls` check local mini kube repository
 
 #### deploy IS 6.1
@@ -73,8 +73,8 @@ get pod name using `kubectl get pods`
 
 #### view all deployments
 
-`minikube service is-deployment --url` change link to https:// to access IS 6.1 deployment on kubernetes
-or
+`minikube service is-deployment --url` change link to https:// to access IS 6.1 deployment on kubernetes <br>
+or <br>
 `minikube service is-service --url` change link to https:// to access IS 6.1 deployment on kubernetes
 
 #### view all services
