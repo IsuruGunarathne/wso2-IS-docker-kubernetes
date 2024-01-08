@@ -4,6 +4,6 @@ metadata:
   namespace: wso2
   name: endpoint-reader
 rules:
-  apiGroups: [""]
-  verbs: ["get", "list"]
-  resources: ["endpoints"]
+  - apiGroups: [""]
+    verbs: ["get", "list"]
+    resources: ["endpoints"]
