@@ -68,7 +68,8 @@ get pod name using `kubectl get pods`
 `kubectl logs -f <pod name>`
 
 #### expose IS 6.1 deployment (optional)
-This exposes the deployment directly to the host machine
+
+This exposes the deployment directly to the host machine and creates a service named with the same name as the deployment
 
 `kubectl expose deployment is-deployment --type=NodePort --port=9443 --target-port=9443`
 
@@ -77,6 +78,10 @@ This exposes the deployment directly to the host machine
 `minikube service is-deployment --url` change link to https:// to access IS 6.1 deployment on kubernetes <br>
 or <br>
 `minikube service is-service --url` change link to https:// to access IS 6.1 deployment on kubernetes
+
+#### list all services on minikube
+
+`minikube service list`
 
 #### view all services
 
