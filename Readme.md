@@ -67,7 +67,8 @@ OR <br>
 get pod name using `kubectl get pods`
 `kubectl logs -f <pod name>`
 
-#### expose IS 6.1 port
+#### expose IS 6.1 deployment (optional)
+This exposes the deployment directly to the host machine
 
 `kubectl expose deployment is-deployment --type=NodePort --port=9443 --target-port=9443`
 
