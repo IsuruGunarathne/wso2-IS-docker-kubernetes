@@ -1,4 +1,4 @@
-# Deploying and IS 6.1 docker image
+# Deploying an IS 6.1 docker image
 
 ## Deploying on docker
 
