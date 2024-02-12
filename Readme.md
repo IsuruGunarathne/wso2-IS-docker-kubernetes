@@ -37,6 +37,10 @@ Copy the IS 7.0 folder (named wso2is-7.0.0) to the docker folder and run the fol
 
 `docker container prune`
 
+#### checking the container
+
+`docker exec -it <container id> /bin/bash` <br>
+
 ## Deploying on kubernetes (using minikube)
 
 #### start minikube

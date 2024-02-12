@@ -19,9 +19,6 @@
 # set base Docker image to eclipse-temurin Docker image
 FROM eclipse-temurin:11.0.21_9-jre-jammy
 
-LABEL maintainer="WSO2 interns" \
-      com.wso2.docker.source="https://github.com/wso2/docker-is/releases/tag/v6.1.0.1"
-
 # work directory
 WORKDIR /home/wso2carbon
 
