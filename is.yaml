@@ -27,11 +27,11 @@ kind: Service
 metadata:
   name: is-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: is
   ports:
     - protocol: TCP
       port: 9443
       targetPort: 9443
-      nodePort: 30100
+      # nodePort: 30100
