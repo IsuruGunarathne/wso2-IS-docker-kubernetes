@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
         - name: is
-          image: is6.1
-          imagePullPolicy: Never
+          image: acrasgardeomainrnd001.azurecr.io/is7.0:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 9443
 
@@ -27,11 +27,11 @@ kind: Service
 metadata:
   name: is-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: is
   ports:
     - protocol: TCP
       port: 9443
       targetPort: 9443
-      nodePort: 30100
+      # nodePort: 30100

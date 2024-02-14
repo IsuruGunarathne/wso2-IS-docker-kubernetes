@@ -1,8 +1,13 @@
-# Deploying an IS 6.1 docker image
+# Deploying an IS 7.0 docker image
+
+## Branches
+
+Main : contains all instructions for IS7.0
+IS-6.1 : contains all instructions for IS6.1
 
 ## Deploying on docker
 
-Copy the IS 6.1 folder (named wso2is-6.1.0) to the docker folder and run the following commands
+Copy the IS 7.0 folder (named wso2is-7.0.0) to the docker folder and run the following commands
 
 #### start docker
 
@@ -10,16 +15,16 @@ Copy the IS 6.1 folder (named wso2is-6.1.0) to the docker folder and run the fol
 
 #### Build image
 
-`docker build -t is6.1 .` image will be named IS6.1
+`docker build -t is7.0 .` image will be named IS7.0
 
 #### Delete docker image
 
-`docker rmi is6.1` delete image named IS6.1
-`docker rmi -f is6.1` force delete image named IS6.1`
+`docker rmi is7.0` delete image named IS7.0
+`docker rmi -f is7.0` force delete image named IS7.0`
 
 #### Run container
 
-`docker run -d --rm -p 127.0.0.1:9443:9443 is6.1` run container in background and map port 8080 to 8080
+`docker run -d --rm -p 127.0.0.1:9443:9443 is7.0` run container in background and map port 8080 to 8080
 
 #### view all containers
 
@@ -37,6 +42,10 @@ Copy the IS 6.1 folder (named wso2is-6.1.0) to the docker folder and run the fol
 
 `docker container prune`
 
+#### checking the container
+
+`docker exec -it <container id> /bin/bash` <br>
+
 ## Deploying on kubernetes (using minikube)
 
 #### start minikube
@@ -53,12 +62,12 @@ OR <br>
 
 #### Build image again and check local mini kube repository
 
-`docker build -t is6.1 .` image will be named IS6.1 <br>
+`docker build -t is7.0 .` image will be named IS7.0 <br>
 OR <br>
-`minikube image load is6.1` load image to local mini kube repository from docker repository <br>
+`minikube image load is7.0` load image to local mini kube repository from docker repository <br>
 `minikube image ls` check local mini kube repository
 
-#### deploy IS 6.1
+#### deploy IS 7.0
 
 `kubectl create -f is.yaml`
 
@@ -67,7 +76,7 @@ OR <br>
 get pod name using `kubectl get pods`
 `kubectl logs -f <pod name>`
 
-#### expose IS 6.1 deployment (optional)
+#### expose IS 7.0 deployment (optional)
 
 This exposes the deployment directly to the host machine and creates a service named with the same name as the deployment
 
@@ -75,9 +84,9 @@ This exposes the deployment directly to the host machine and creates a service n
 
 #### view all deployments
 
-`minikube service is-deployment --url` change link to https:// to access IS 6.1 deployment on kubernetes <br>
+`minikube service is-deployment --url` change link to https:// to access IS 7.0 deployment on kubernetes <br>
 or <br>
-`minikube service is-service --url` change link to https:// to access IS 6.1 deployment on kubernetes
+`minikube service is-service --url` change link to https:// to access IS 7.0 deployment on kubernetes
 
 #### list all services on minikube
 

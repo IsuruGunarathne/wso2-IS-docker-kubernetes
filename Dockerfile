@@ -19,17 +19,14 @@
 # set base Docker image to eclipse-temurin Docker image
 FROM eclipse-temurin:11.0.21_9-jre-jammy
 
-LABEL maintainer="WSO2 interns" \
-      com.wso2.docker.source="https://github.com/wso2/docker-is/releases/tag/v6.1.0.1"
-
 # work directory
 WORKDIR /home/wso2carbon
 
 # copy WSO2 product distribution to user's home directory and set home directory ownership to user wso2carbon
-COPY ./wso2is-6.1.0 /home/wso2carbon/wso2is-6.1.0
+COPY ./wso2is-7.0.0 /home/wso2carbon/wso2is-7.0.0
 
 # expose ports
 EXPOSE 4000 9763 9443
 
 # initiate container and start WSO2 Carbon server
-ENTRYPOINT ["/home/wso2carbon/wso2is-6.1.0/bin/wso2server.sh"]
+ENTRYPOINT ["/home/wso2carbon/wso2is-7.0.0/bin/wso2server.sh"]
