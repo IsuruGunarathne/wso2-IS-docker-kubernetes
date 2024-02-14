@@ -1,5 +1,10 @@
 # Deploying an IS 7.0 docker image
 
+## Branches
+
+Main : contains all instructions for IS7.0
+IS-6.1 : contains all instructions for IS6.1
+
 ## Deploying on docker
 
 Copy the IS 7.0 folder (named wso2is-7.0.0) to the docker folder and run the following commands
