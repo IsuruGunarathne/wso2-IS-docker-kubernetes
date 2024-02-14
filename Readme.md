@@ -2,7 +2,7 @@
 
 ## Branches
 
-Main : contains all instructions for IS7.0
+Main : contains all instructions for IS7.0 <br>
 IS-6.1 : contains all instructions for IS6.1
 
 ## Deploying on docker
